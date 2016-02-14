@@ -13,10 +13,19 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var managedContext: NSManagedObjectContext!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+ 
+        //propagating a managed context
+
+        let viewController = window!.rootViewController as! ViewController
+        viewController.managedContext = managedObjectContext
+        
+        
+        
         return true
     }
 

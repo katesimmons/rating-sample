@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F17771121C70D596004F7D22 /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17771101C70D596004F7D22 /* Bowtie+CoreDataProperties.swift */; };
+		F17771131C70D596004F7D22 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17771111C70D596004F7D22 /* Bowtie.swift */; };
 		F1AC03671C70BBFA00FD749A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC03661C70BBFA00FD749A /* AppDelegate.swift */; };
 		F1AC03691C70BBFA00FD749A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC03681C70BBFA00FD749A /* ViewController.swift */; };
 		F1AC036C1C70BBFA00FD749A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AC036A1C70BBFA00FD749A /* Main.storyboard */; };
 		F1AC036F1C70BBFA00FD749A /* rating_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1AC036D1C70BBFA00FD749A /* rating_sample.xcdatamodeld */; };
 		F1AC03711C70BBFA00FD749A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AC03701C70BBFA00FD749A /* Assets.xcassets */; };
 		F1AC03741C70BBFA00FD749A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AC03721C70BBFA00FD749A /* LaunchScreen.storyboard */; };
+		F1AC037C1C70C59C00FD749A /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1AC037B1C70C59C00FD749A /* SampleData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F17771101C70D596004F7D22 /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F17771111C70D596004F7D22 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		F1AC03631C70BBFA00FD749A /* rating-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rating-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AC03661C70BBFA00FD749A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AC03681C70BBFA00FD749A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		F1AC03701C70BBFA00FD749A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1AC03731C70BBFA00FD749A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1AC03751C70BBFA00FD749A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AC037B1C70C59C00FD749A /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleData.plist; path = ../SampleData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,8 @@
 		F1AC035A1C70BBFA00FD749A = {
 			isa = PBXGroup;
 			children = (
+				F17771101C70D596004F7D22 /* Bowtie+CoreDataProperties.swift */,
+				F17771111C70D596004F7D22 /* Bowtie.swift */,
 				F1AC03651C70BBFA00FD749A /* rating-sample */,
 				F1AC03641C70BBFA00FD749A /* Products */,
 			);
@@ -56,15 +64,48 @@
 		F1AC03651C70BBFA00FD749A /* rating-sample */ = {
 			isa = PBXGroup;
 			children = (
+				F1AC03801C70C6A600FD749A /* View */,
+				F1AC037F1C70C69F00FD749A /* Model */,
+				F1AC037E1C70C69400FD749A /* Data */,
+				F1AC037D1C70C68500FD749A /* Controller */,
 				F1AC03661C70BBFA00FD749A /* AppDelegate.swift */,
-				F1AC03681C70BBFA00FD749A /* ViewController.swift */,
-				F1AC036A1C70BBFA00FD749A /* Main.storyboard */,
 				F1AC03701C70BBFA00FD749A /* Assets.xcassets */,
-				F1AC03721C70BBFA00FD749A /* LaunchScreen.storyboard */,
 				F1AC03751C70BBFA00FD749A /* Info.plist */,
-				F1AC036D1C70BBFA00FD749A /* rating_sample.xcdatamodeld */,
 			);
 			path = "rating-sample";
+			sourceTree = "<group>";
+		};
+		F1AC037D1C70C68500FD749A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC03681C70BBFA00FD749A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F1AC037E1C70C69400FD749A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC037B1C70C59C00FD749A /* SampleData.plist */,
+				F1AC036D1C70BBFA00FD749A /* rating_sample.xcdatamodeld */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		F1AC037F1C70C69F00FD749A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F1AC03801C70C6A600FD749A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC036A1C70BBFA00FD749A /* Main.storyboard */,
+				F1AC03721C70BBFA00FD749A /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +168,7 @@
 			files = (
 				F1AC03741C70BBFA00FD749A /* LaunchScreen.storyboard in Resources */,
 				F1AC03711C70BBFA00FD749A /* Assets.xcassets in Resources */,
+				F1AC037C1C70C59C00FD749A /* SampleData.plist in Resources */,
 				F1AC036C1C70BBFA00FD749A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +183,8 @@
 				F1AC03691C70BBFA00FD749A /* ViewController.swift in Sources */,
 				F1AC036F1C70BBFA00FD749A /* rating_sample.xcdatamodeld in Sources */,
 				F1AC03671C70BBFA00FD749A /* AppDelegate.swift in Sources */,
+				F17771131C70D596004F7D22 /* Bowtie.swift in Sources */,
+				F17771121C70D596004F7D22 /* Bowtie+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +332,7 @@
 				F1AC037A1C70BBFA00FD749A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
