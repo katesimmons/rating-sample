@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -21,7 +22,9 @@ class ViewController: UIViewController {
     
 
     
-    var managedContext: NSManagedObjectContext! //why am I getting Undeclared Type NSManagedObjectContext error here? Didn't in the video...
+    var managedContext: NSManagedObjectContext!
+    
+    //keep track
     var currentBowtie: Bowtie!
     
 
@@ -35,15 +38,15 @@ class ViewController: UIViewController {
         
         //2- We create a fetchrequest.
         let request = NSFetchRequest(entityName:"Bowtie")
-        let firstTitle = segmentedControl.titleForSegmentAtIndex(0)
+        let firstTitle = segmentedControls.titleForSegmentAtIndex(0)
         
-        request.predicate = NSPredicate(format:"searchKey == %@", firstTitle!)
+        request.predicate = NSPredicate(format: "searchKey == %@", firstTitle!)
         
         //3- We are handle array of Bowtie objects.
         do {
             //6- Keep track currently selected.
             let results =
-            try managedContext.executeFetchRequest(request) as! [Bowtie]
+            try managedContext.executeFetchRequest(request) as! [Bowtie] 
             
             currentBowtie = results.first
             populate(currentBowtie)
@@ -60,6 +63,24 @@ class ViewController: UIViewController {
     
     //actions
     @IBAction func wear(sender: AnyObject) {
+        //this method takes the currently selected bow tie and increments its timesworn attribute by one.
+        let times = currentBowtie.timesWorn!.integerValue
+        
+        //Unbox the integer
+        currentBowtie.timesWorn = NSNumber(integer: (times + 1))
+        //Update lastWorn date.
+        currentBowtie.lastWorn = NSDate()
+        
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        
+        populate(currentBowtie)
+        print("the times worn went up")
+        
     }
     
     @IBAction func rate(sender: AnyObject) {
@@ -131,13 +152,13 @@ class ViewController: UIViewController {
         ratingLabel.text = "Rating: \(bowtie.rating!.doubleValue)/5"
         
         timesWornLabel.text =
-        "# times worn: \(bowtie.timesWorn!.integerValue)"
+        "\(bowtie.timesWorn!.integerValue)"
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .ShortStyle
         dateFormatter.timeStyle = .NoStyle
         
-        lastWornLabel.text = "Last worn: " +
+        lastWornLabel.text =
             dateFormatter.stringFromDate(bowtie.lastWorn!)
         
         favoriteLabel.hidden = !bowtie.isFavorite!.boolValue

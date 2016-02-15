@@ -77,20 +77,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ratinglabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GT-Cp-FQz">
-                                <rect key="frame" x="128" y="373" width="66" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Worn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hap-fH-LpB">
                                 <rect key="frame" x="76" y="402" width="80" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeswornlabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-aV-lK2">
-                                <rect key="frame" x="168" y="402" width="103" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="timeswornlabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-aV-lK2">
+                                <rect key="frame" x="164" y="402" width="103" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="103" id="TKG-QE-Pp5"/>
                                 </constraints>
@@ -120,6 +114,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-EK-ZrU">
                                 <rect key="frame" x="76" y="460" width="55" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ratinglabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GT-Cp-FQz">
+                                <rect key="frame" x="128" y="373" width="66" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -165,11 +165,11 @@
                     <connections>
                         <outlet property="favoriteLabel" destination="DmS-EK-ZrU" id="3jz-BC-HYi"/>
                         <outlet property="imageView" destination="sAP-wj-5zs" id="EVG-v0-sjO"/>
-                        <outlet property="lastWornLabel" destination="nXe-y8-zjG" id="h7k-Uw-2nK"/>
+                        <outlet property="lastWornLabel" destination="nXe-y8-zjG" id="xtH-Ez-EBZ"/>
                         <outlet property="nameLabel" destination="rGq-bn-hWM" id="tMl-2g-yXm"/>
                         <outlet property="ratingLabel" destination="0GT-Cp-FQz" id="21t-GS-JbB"/>
                         <outlet property="segmentedControls" destination="d1F-mC-tan" id="FPz-ii-y5t"/>
-                        <outlet property="timesWornLabel" destination="YS5-aV-lK2" id="Xxb-Gz-Ha4"/>
+                        <outlet property="timesWornLabel" destination="YS5-aV-lK2" id="bX5-vF-CAT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
